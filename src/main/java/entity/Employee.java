@@ -1,6 +1,11 @@
 package com.manasa.employeemanagementsystem.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 
 @Entity
 @Table(name = "employees")
@@ -12,18 +17,24 @@ public class Employee {
     private Long id;
 
 
+    @NotBlank(message = "Name is required")
     @Column(nullable = false)
     private String name;
 
 
+    @NotBlank(message = "Email is required")
+    @Email(message = "Enter a valid email")
     @Column(unique = true, nullable = false)
     private String email;
 
 
+    @NotBlank(message = "Department is required")
     @Column(nullable = false)
     private String department;
 
 
+    @NotNull(message = "Salary is required")
+    @Min(value = 1, message = "Salary must be greater than 0")
     @Column(nullable = false)
     private Double salary;
 

@@ -1,12 +1,16 @@
 package com.manasa.employeemanagementsystem.controller;
 
+
 import com.manasa.employeemanagementsystem.entity.Employee;
 import com.manasa.employeemanagementsystem.repository.EmployeeRepository;
+
+import jakarta.validation.Valid;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 
 @RestController
@@ -17,10 +21,12 @@ public class EmployeeController {
     private final EmployeeRepository employeeRepository;
 
 
+
     public EmployeeController(EmployeeRepository employeeRepository) {
 
         this.employeeRepository = employeeRepository;
     }
+
 
 
 
@@ -30,6 +36,8 @@ public class EmployeeController {
 
         return employeeRepository.findAll();
     }
+
+
 
 
 
@@ -47,10 +55,12 @@ public class EmployeeController {
 
 
 
-    // Add employee (ADMIN)
+
+
+    // Add employee
     @PostMapping
     public Employee addEmployee(
-            @RequestBody Employee employee) {
+            @Valid @RequestBody Employee employee) {
 
 
         return employeeRepository.save(employee);
@@ -59,29 +69,36 @@ public class EmployeeController {
 
 
 
+
+
     // Update employee
     @PutMapping("/{id}")
     public ResponseEntity<Employee> updateEmployee(
             @PathVariable Long id,
-            @RequestBody Employee employee) {
+            @Valid @RequestBody Employee employee) {
 
 
         return employeeRepository.findById(id)
                 .map(existing -> {
+
 
                     existing.setName(employee.getName());
                     existing.setEmail(employee.getEmail());
                     existing.setDepartment(employee.getDepartment());
                     existing.setSalary(employee.getSalary());
 
+
                     return ResponseEntity.ok(
                             employeeRepository.save(existing)
                     );
+
 
                 })
                 .orElse(ResponseEntity.notFound().build());
 
     }
+
+
 
 
 
@@ -92,6 +109,7 @@ public class EmployeeController {
 
 
         employeeRepository.deleteById(id);
+
 
         return ResponseEntity.ok(
                 "Employee deleted successfully"
