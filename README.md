@@ -23,7 +23,8 @@ https://employee-management-system-production-a911.up.railway.app/swagger-ui/ind
 
 ### Swagger UI
 
-![Swagger UI](screenshots/swagger-ui.png)
+<img width="1600" height="900" alt="Swagger UI" src="https://github.com/user-attachments/assets/5b3faa0d-da18-4ecb-b0d4-81e4bd9ab71c" />
+
 
 ---
 
