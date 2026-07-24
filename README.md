@@ -18,7 +18,8 @@ https://employee-management-system-production-a911.up.railway.app/swagger-ui/ind
 
 ### Home API
 
-![Home API](screenshots/home-page.png)
+<img width="1600" height="900" alt="Home API" src="https://github.com/user-attachments/assets/ea09c3a5-d9d2-4f53-9da2-fb119ccb4c2b" />
+
 
 ### Swagger UI
 
