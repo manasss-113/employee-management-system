@@ -1,14 +1,18 @@
-# Use Java 21
-FROM eclipse-temurin:21-jdk
+FROM maven:3.9.8-eclipse-temurin-21 AS build
 
-# Create app folder
 WORKDIR /app
 
-# Copy the generated JAR file
-COPY target/employee-management-system-0.0.1-SNAPSHOT.jar app.jar
+COPY . .
 
-# Spring Boot port
+RUN chmod +x mvnw
+RUN ./mvnw package -DskipTests
+
+FROM eclipse-temurin:21-jdk
+
+WORKDIR /app
+
+COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 8080
 
-# Start the application
 ENTRYPOINT ["java","-jar","app.jar"]
