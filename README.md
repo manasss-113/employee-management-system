@@ -36,16 +36,14 @@ https://employee-management-system-production-a911.up.railway.app/swagger-ui/ind
 - Employee CRUD Operations
   - Add Employee
   - View All Employees
-  - Get Employee by ID
-  - Update Employee
+  - Update Employee Details
   - Delete Employee
+
 - MySQL Database Integration
-- Swagger OpenAPI Documentation
-- Railway Cloud Deployment
+- API Documentation using Swagger OpenAPI
+- Cloud Deployment using Railway
 
----
-
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 
@@ -92,19 +90,19 @@ src
 
 ## 📌 API Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /api/auth/register | Register User |
-| POST | /api/auth/login | Login User |
-| GET | /api/employees | Get All Employees |
-| GET | /api/employees/{id} | Get Employee by ID |
-| POST | /api/employees | Add Employee |
-| PUT | /api/employees/{id} | Update Employee |
-| DELETE | /api/employees/{id} | Delete Employee |
+| Method | Endpoint            | Description        |
+| ------ | ------------------- | ------------------ |
+| POST   | /api/auth/register  | Register User      |
+| POST   | /api/auth/login     | Login User         |
+| GET    | /api/employees      | Get All Employees  |
+| GET    | /api/employees/{id} | Get Employee by ID |
+| POST   | /api/employees      | Add Employee       |
+| PUT    | /api/employees/{id} | Update Employee    |
+| DELETE | /api/employees/{id} | Delete Employee    |
 
 ---
 
-## ▶️ Running the Project
+## How to Run
 
 1. Clone the repository
 

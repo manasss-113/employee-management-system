@@ -54,7 +54,8 @@ public class SecurityConfig {
                         ).permitAll()
 
                         // Protected APIs
-                        .requestMatchers("/employees/**").authenticated()
+                        // Public APIs
+                        .requestMatchers("/employees/**").permitAll()
 
                         .anyRequest().permitAll()
                 )
