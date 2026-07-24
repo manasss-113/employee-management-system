@@ -162,3 +162,4 @@ https://employee-management-system-production-a911.up.railway.app/swagger-ui/ind
 **Perla Manasa**
 
 - GitHub: https://github.com/manasss-113
+- LinkedIn: https://www.linkedin.com/in/perla-manasa-840610357
