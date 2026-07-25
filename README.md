@@ -10,7 +10,7 @@ A RESTful Employee Management System developed using **Spring Boot**, **Spring S
 https://employee-management-system-production-20b7.up.railway.app/
 
 **Swagger UI:**  
-https://employee-management-system-production-a911.up.railway.app/swagger-ui/index.html
+https://employee-management-system-production-20b7.up.railway.app/swagger-ui/index.html
 
 ---
 
