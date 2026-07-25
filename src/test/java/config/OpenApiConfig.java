@@ -13,7 +13,7 @@ public class OpenApiConfig {
         return new OpenAPI()
                 .addServersItem(
                         new Server()
-                                .url("http://employee-management-system-production-20b7.up.railway.app")
+                                .url("https://employee-management-system-production-20b7.up.railway.app")
                 );
     }
 }
